@@ -134,11 +134,45 @@ The Generative Agents paper proposed equal weighting with normalized scores. But
 | Index staleness | Medium | Vendor-managed; architecture choice |
 | Cross-agent memory | Low-Medium | Namespace conventions (immature) |
 
+---
+
+## 8. Memory Evaluation: The Benchmark Gap
+
+**What it is:** There is no widely-accepted benchmark for agent memory quality. Existing evaluations measure downstream task performance or human preference — not the memory system directly.
+
+**Why it matters:** Without good evals, it’s impossible to know if a new memory approach is actually better. Practitioners make architecture decisions based on vibes.
+
+**What’s needed:**
+- Memory coherence over time (does the belief state stay consistent over weeks?)
+- Memory quality under failure modes (graceful degradation when memory is wrong)
+- Cross-agent memory correctness
+- Privacy audits (does the agent know things it shouldn’t?)
+
+**2025 status:** The 2025 survey [[research/state-of-the-art-2025]] identifies this as one of the field’s most pressing gaps. New benchmarks (MemBench, LongMemEval) are emerging but not yet widely adopted.
+
+---
+
+## 9. Multi-Modal Memory
+
+**What it is:** Most memory systems handle text. As agents become multi-modal (vision, audio, video), memory architectures need to store and retrieve across modalities.
+
+**Examples of unsolved problems:**
+- Storing a memory about an image the agent saw (caption? embedding? both?)
+- Cross-modal retrieval: text query retrieves relevant visual memory
+- Memory compression for high-bandwidth modalities (video = enormous storage)
+
+**2025 status:** Early research stage. Most multi-modal agents use per-modality memory (separate text and image stores) with manual bridging.
+
+---
+
 ## See Also
 
 - [[key-papers]]
+- [[research/state-of-the-art-2025]]
 - [[architectures/mem0]]
 - [[architectures/memgpt]]
 - [[concepts/long-term-memory]]
 - [[concepts/memory-retrieval]]
 - [[concepts/episodic-vs-semantic]]
+- [[concepts/forgetting-mechanisms]]
+- [[concepts/memory-consolidation]]

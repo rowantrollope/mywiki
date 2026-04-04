@@ -120,6 +120,84 @@ Agents learn from failures by reflecting on past attempts and storing verbal fee
 
 ---
 
+---
+
+## Agent Memory System Papers (2023-2025)
+
+### MemoryBank: Enhancing LLMs with Long-Term Memory (2023)
+**Authors:** Wanjun Zhong et al.
+**Link:** https://arxiv.org/abs/2305.10250
+**Article:** [[papers/memorybank]]
+
+Proposes a memory mechanism for LLM-based companions using the Ebbinghaus forgetting curve: memories decay with time but strengthen on retrieval. Enables long-term personalization and adaptive user personality modeling.
+
+**Key contribution:** Biologically-inspired selective forgetting; personality modeling from episodic memory.
+
+---
+
+### A-MEM: Agentic Memory for LLM Agents (2025)
+**Authors:** Wujiang Xu et al.
+**Link:** https://arxiv.org/abs/2502.12110
+**Article:** [[papers/a-mem]]
+
+Zettelkasten-inspired memory system where new memories generate structured notes with dynamic links to related memories. New memories can update existing ones — creating an evolving, self-refining knowledge network.
+
+**Key contribution:** Continuous memory evolution; dynamic linking; adaptive memory operations.
+
+---
+
+### HippoRAG: Neurobiologically Inspired Long-Term Memory (2024)
+**Authors:** Bernal Jimenez Gutierrez et al. (OSU)
+**Link:** https://arxiv.org/abs/2405.14831
+**Article:** [[papers/hipporag]]
+
+Models the hippocampus/neocortex split: LLM extracts entities into a knowledge graph (hippocampal index), Personalized PageRank enables multi-hop retrieval. Outperforms standard RAG by 20% at 10-30× lower cost.
+
+**Key contribution:** Graph-indexed RAG; multi-hop retrieval via PPR; neuroplasticity-inspired architecture.
+
+---
+
+### RAISE: Reasoning and Acting through Scratchpad and Examples (2024)
+**Authors:** Liangyu Chen et al.
+**Link:** https://arxiv.org/abs/2401.02777
+**Article:** [[papers/raise]]
+
+Extends ReAct with a four-component working memory: persistent scratchpad + conversation history (dialogue-level) and task trajectory + few-shot examples (turn-level). Provides a richer working memory framework for multi-turn conversational agents.
+
+**Key contribution:** Explicit working memory taxonomy; persistent scratchpad; agent construction pipeline.
+
+---
+
+### LongAgent: Scaling to 128k Context via Multi-Agent Collaboration (2024)
+**Authors:** Jun Zhao et al.
+**Link:** https://arxiv.org/abs/2402.11550
+
+Scales LLaMA to 128k context through a leader-member multi-agent system. A leader agent coordinates member agents reading different document sections, with inter-member communication to resolve hallucination conflicts.
+
+**Key contribution:** Distributed memory across agent teams; conflict resolution via inter-agent communication.
+
+---
+
+### Ghost in the Minecraft (GITM, 2023)
+**Authors:** Xizhou Zhu et al.
+**Link:** https://arxiv.org/abs/2305.17144
+
+Generally capable Minecraft agents using LLMs with text-based knowledge and structured memory. Achieves 67.5% success on the "ObtainDiamond" task (vs. 20% for RL methods) without GPU training.
+
+**Key contribution:** Text-based procedural memory for open-world tasks; LLM-driven task decomposition with memory.
+
+---
+
+### Memory in the Age of AI Agents: A Survey (2025)
+**Authors:** Yuyang Hu, Shichun Liu, Guibin Zhang et al.
+**Link:** https://arxiv.org/abs/2512.13564
+
+Comprehensive 2025 survey covering memory mechanisms for individual and multi-agent systems, taxonomies of memory operations, evaluation benchmarks, and open research directions.
+
+**Key contribution:** Most comprehensive survey as of 2025; identifies key open problems and emerging directions.
+
+---
+
 ## Reading Order Recommendations
 
 1. **Start with CoALA** — get the vocabulary and taxonomy
