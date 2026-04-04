@@ -28,6 +28,9 @@ This section covers everything about how AI agents store, retrieve, and reason o
 | [[concepts/working-memory]] | Context window as working memory; limits, attention patterns, management strategies |
 | [[concepts/long-term-memory]] | External stores, layered compression, retention policies, coherence challenges |
 | [[concepts/memory-retrieval]] | Similarity search, recency weighting, importance scoring, failure modes |
+| [[concepts/memory-consolidation]] | How agents consolidate short-term episodic experiences into stable long-term knowledge |
+| [[concepts/forgetting-mechanisms]] | Intentional forgetting, relevance decay, Ebbinghaus-inspired pruning, retention policies |
+| [[concepts/reflection-and-abstraction]] | Higher-order memory synthesis, multi-level reflection, abstraction patterns |
 
 ---
 
@@ -43,12 +46,38 @@ This section covers everything about how AI agents store, retrieve, and reason o
 
 ---
 
+## Papers (Detailed Article per Paper)
+
+| Article | Summary |
+|---------|---------|
+| [[papers/_index]] | Annotated bibliography of all surveyed papers with reading order recommendations |
+| [[papers/memgpt]] | MemGPT: virtual context management via OS-inspired memory hierarchy (arXiv: 2310.08560) |
+| [[papers/generative-agents]] | Generative Agents: memory stream, reflection, and emergent social behavior (arXiv: 2304.03442) |
+| [[papers/coala]] | CoALA: unified taxonomy mapping cognitive science memory types to LLM agents (arXiv: 2309.02427) |
+| [[papers/a-mem]] | A-MEM: Zettelkasten-inspired agentic memory with dynamic linking and evolution (arXiv: 2502.12110) |
+| [[papers/hipporag]] | HippoRAG: hippocampus-inspired graph-indexed RAG with Personalized PageRank (arXiv: 2405.14831) |
+| [[papers/memorybank]] | MemoryBank: Ebbinghaus forgetting curve for LLM long-term memory (arXiv: 2305.10250) |
+| [[papers/reflexion]] | Reflexion: verbal self-reflection as episodic memory for agent self-improvement (arXiv: 2303.11366) |
+| [[papers/raise]] | RAISE: scratchpad + examples working memory for conversational agents (arXiv: 2401.02777) |
+
+---
+
+## Blogs and Industry Coverage
+
+| Article | Summary |
+|---------|---------|
+| [[blogs/lilian-weng-agents]] | Lilian Weng's canonical LLM agents post — memory section analysis and influence |
+| [[blogs/recent-developments]] | Synthesis of 2024-2025 blog coverage: LangChain, Anthropic, mem0, OpenAI, LlamaIndex |
+
+---
+
 ## Research
 
 | Article | Summary |
 |---------|---------|
-| [[research/key-papers]] | Annotated bibliography: MemGPT, Generative Agents, CoALA, RAG, ReAct, Reflexion |
-| [[research/open-problems]] | Unsolved: catastrophic forgetting, coherence, hallucination, privacy, relevance scoring |
+| [[research/key-papers]] | Annotated bibliography: MemGPT, Generative Agents, CoALA, RAG, ReAct, Reflexion, and 7 more |
+| [[research/open-problems]] | Unsolved: catastrophic forgetting, coherence, hallucination, privacy, evaluation gaps |
+| [[research/state-of-the-art-2025]] | Current SOTA summary: production maturity, reference architecture, key systems, trends |
 
 ---
 
@@ -65,8 +94,10 @@ Individual articles link back to this index via their `## See Also` sections.
 - **New to the topic?** Start with [[overview]], then [[concepts/types-of-memory]]
 - **Building something?** Go to [[architectures/rag]] or [[architectures/vector-stores]]
 - **Evaluating tools?** Compare [[architectures/mem0]] vs [[architectures/memgpt]]
-- **Researching?** Start with [[research/key-papers]] reading order recommendations
+- **Researching?** Start with [[papers/_index]] for reading order recommendations
+- **Reading papers?** Browse [[papers/memgpt]], [[papers/generative-agents]], etc. for detailed summaries
 - **Debugging a system?** Check [[research/open-problems]] for known failure modes
+- **Want the big picture?** Read [[research/state-of-the-art-2025]]
 
 ---
 
