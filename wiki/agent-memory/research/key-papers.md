@@ -198,6 +198,41 @@ Comprehensive 2025 survey covering memory mechanisms for individual and multi-ag
 
 ---
 
+## 2026 Papers
+
+### AgeMem: Unified LTM/STM Management via RL (2026)
+**Authors:** Yi Yu et al.
+**Link:** https://arxiv.org/abs/2601.01885
+**Article:** [[papers/agemem]]
+
+Yu et al. propose integrating both long-term memory (LTM) and short-term memory (STM) operations directly into the agent's policy as tool-based actions, training end-to-end via a three-stage progressive reinforcement learning strategy with step-wise GRPO for sparse reward credit assignment. Evaluated on five long-horizon benchmarks, AgeMem consistently outperforms memory-augmented baselines across multiple LLM backbones, achieving higher task performance, better long-term memory quality, and more efficient context utilization than architectures that treat LTM and STM as separate subsystems.
+
+**Key contribution:** End-to-end RL-trained unified memory policy; three-stage curriculum; step-wise GRPO for temporally-sparse memory rewards.
+
+---
+
+### AutoRefine: Dual-Form Experience Patterns for Continual Agent Refinement (2026)
+**Authors:** Yuhang Ye et al.
+**Link:** https://arxiv.org/abs/2601.22758
+**Article:** [[papers/autorefine]]
+
+Ye et al. extract two forms of reusable expertise from agent execution trajectories: *subagent patterns* (specialized subagents with independent reasoning for complex procedural subtasks) and *skill patterns* (guidelines or code snippets for static knowledge). A continuous maintenance mechanism scores, prunes, and merges patterns to prevent repository degradation over time. On TravelPlanner, automatic extraction achieves 27.1% vs. 12.1% for manually-designed expert systems — demonstrating that learned procedural knowledge can exceed hand-crafted solutions.
+
+**Key contribution:** Dual-form expertise extraction; continuous pattern maintenance; procedural knowledge crystallized as callable subagents.
+
+---
+
+### MemoryAgentBench: Multi-Competency Memory Evaluation (2025, updated Mar 2026)
+**Authors:** Yuanzhe Hu, Y. Wang et al.
+**Link:** https://arxiv.org/abs/2507.05257
+**Article:** [[papers/memory-agent-bench]]
+
+Hu and Wang et al. introduce the first benchmark covering four core memory competencies derived from cognitive science: accurate retrieval, test-time learning, long-range understanding, and selective forgetting. The benchmark transforms existing long-context datasets into incremental multi-turn formats and introduces new datasets for the competencies not covered elsewhere. Empirical evaluation of a diverse set of memory agents — from basic RAG to advanced external-memory systems — reveals that no current approach masters all four competencies, with selective forgetting being the hardest across the board.
+
+**Key contribution:** Four-competency memory taxonomy; first benchmark covering all four simultaneously; evidence that selective forgetting is the critical unsolved problem.
+
+---
+
 ## Reading Order Recommendations
 
 1. **Start with CoALA** — get the vocabulary and taxonomy

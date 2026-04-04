@@ -1,8 +1,29 @@
 ---
-title: "State of Agent Memory: 2025"
-tags: [agent-memory, research, state-of-the-art, 2025, survey]
+title: "State of Agent Memory: 2025–2026"
+tags: [agent-memory, research, state-of-the-art, 2025, 2026, survey]
 created: 2026-04-04
 last_updated: 2026-04-04
+---
+
+## 2026 Updates
+
+*Added April 2026 — three significant papers from early 2026 extend the 2025 SOTA:*
+
+### AgeMem — End-to-End RL-Trained Memory (Jan 2026)
+**arXiv:** [2601.01885](https://arxiv.org/abs/2601.01885) | **Article:** [[papers/agemem]]
+
+Yu et al. propose training LTM and STM as unified policy actions via reinforcement learning with a three-stage progressive curriculum and step-wise GRPO. Outperforms all heuristic-controller baselines on five long-horizon benchmarks. Key insight: memory operations should be part of the agent policy, not a separate subsystem. **Directly advances:** the "research frontier" item "Memory-augmented fine-tuning" toward a practical RL alternative.
+
+### AutoRefine — Reusable Expertise from Trajectories (Jan 2026)
+**arXiv:** [2601.22758](https://arxiv.org/abs/2601.22758) | **Article:** [[papers/autorefine]]
+
+Ye et al. show that extracting dual-form experience patterns (specialized subagents for procedural subtasks + skill patterns for static knowledge) with continuous maintenance (scoring, pruning, merging) enables continual agent improvement. Achieves 98.4% on ALFWorld and 27.1% on TravelPlanner — *exceeding manually designed expert systems (12.1%)*. **Directly advances:** the continual learning gap identified in the 2025 surveys.
+
+### MemoryAgentBench — First Multi-Competency Memory Eval (updated Mar 2026)
+**arXiv:** [2507.05257](https://arxiv.org/abs/2507.05257) | **Article:** [[papers/memory-agent-bench]]
+
+Hu, Wang et al. introduce a benchmark covering four core memory competencies: accurate retrieval, test-time learning, long-range understanding, and selective forgetting. All evaluated systems fail to master all four simultaneously; selective forgetting is the hardest. **Directly addresses:** the "Evaluation: The Open Problem" gap called out in this article's 2025 version.
+
 ---
 
 ## Where We Are
@@ -156,7 +177,7 @@ As models run on mobile and edge devices (Apple Intelligence, on-device LLMs), m
 Current systems separate retrieval from reasoning. Next generation will tightly integrate: the agent reasons while simultaneously deciding what to retrieve, what to store, and how to update its beliefs. [[papers/a-mem]]'s continuous evolution approach points in this direction.
 
 **4. Memory evals become a research priority**
-The lack of good benchmarks is a known problem. Expect dedicated memory evaluation frameworks to emerge from major labs in 2025-2026.
+MemoryAgentBench (arXiv: 2507.05257, updated March 2026) has partially addressed this gap — introducing a four-competency benchmark covering accurate retrieval, test-time learning, long-range understanding, and selective forgetting. The evaluation tools now exist; closing the performance gap is the next challenge.
 
 **5. Multi-modal memory**
 Most current systems handle text. Multi-modal agents (vision, audio) need memory systems that handle images, video, and audio — with cross-modal retrieval.

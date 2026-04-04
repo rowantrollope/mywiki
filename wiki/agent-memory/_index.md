@@ -59,6 +59,9 @@ This section covers everything about how AI agents store, retrieve, and reason o
 | [[papers/memorybank]] | MemoryBank: Ebbinghaus forgetting curve for LLM long-term memory (arXiv: 2305.10250) |
 | [[papers/reflexion]] | Reflexion: verbal self-reflection as episodic memory for agent self-improvement (arXiv: 2303.11366) |
 | [[papers/raise]] | RAISE: scratchpad + examples working memory for conversational agents (arXiv: 2401.02777) |
+| [[papers/agemem]] | AgeMem: unified LTM/STM management via end-to-end RL with step-wise GRPO (arXiv: 2601.01885, 2026) |
+| [[papers/autorefine]] | AutoRefine: dual-form experience patterns (subagents + skills) for continual agent refinement (arXiv: 2601.22758, 2026) |
+| [[papers/memory-agent-bench]] | MemoryAgentBench: four-competency memory evaluation benchmark via incremental multi-turn interactions (arXiv: 2507.05257, 2026) |
 
 ---
 
@@ -77,7 +80,7 @@ This section covers everything about how AI agents store, retrieve, and reason o
 |---------|---------|
 | [[research/key-papers]] | Annotated bibliography: MemGPT, Generative Agents, CoALA, RAG, ReAct, Reflexion, and 7 more |
 | [[research/open-problems]] | Unsolved: catastrophic forgetting, coherence, hallucination, privacy, evaluation gaps |
-| [[research/state-of-the-art-2025]] | Current SOTA summary: production maturity, reference architecture, key systems, trends |
+| [[research/state-of-the-art-2025]] | SOTA 2025–2026: production maturity, reference architecture, key systems, trends, 2026 paper updates |
 
 ---
 

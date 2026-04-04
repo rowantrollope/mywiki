@@ -104,6 +104,29 @@ Hu, Liu et al. — comprehensive 2025 survey covering memory mechanisms across i
 
 ---
 
+## 2026 Papers
+
+### AgeMem: Unified Long-Term and Short-Term Memory Management via RL (2026)
+**arXiv:** [2601.01885](https://arxiv.org/abs/2601.01885) | **Article:** [[papers/agemem]]
+
+Yu et al. train LTM and STM as unified policy actions via RL with three-stage progressive curriculum and step-wise GRPO, outperforming all heuristic-controller baselines on five long-horizon benchmarks.
+
+---
+
+### AutoRefine: Dual-Form Experience Patterns for Continual LLM Agent Refinement (2026)
+**arXiv:** [2601.22758](https://arxiv.org/abs/2601.22758) | **Article:** [[papers/autorefine]]
+
+Ye et al. extract procedural subagents and declarative skill patterns from execution trajectories with continuous maintenance (scoring, pruning, merging), exceeding manually-designed systems on TravelPlanner (27.1% vs 12.1%).
+
+---
+
+### MemoryAgentBench: Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions (2025, updated Mar 2026)
+**arXiv:** [2507.05257](https://arxiv.org/abs/2507.05257) | **Article:** [[papers/memory-agent-bench]]
+
+Hu, Wang et al. introduce the first benchmark covering four core memory competencies (accurate retrieval, test-time learning, long-range understanding, selective forgetting), revealing that no current memory agent masters all four simultaneously.
+
+---
+
 ## Reading Order Recommendations
 
 **For newcomers:**
