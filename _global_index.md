@@ -27,6 +27,22 @@ Key articles:
 
 ---
 
+### 📁 Agent Filesystems
+How agents use filesystems for memory, context, and state — workspace patterns, file-based memory, GitOps for agents.
+
+**[[wiki/agent-filesystems/_index|→ Agent Filesystems Index]]**
+
+Key articles:
+- [[wiki/agent-filesystems/overview|Overview]] — Why filesystems are a distinct design concern for agents
+- [[wiki/agent-filesystems/concepts/workspace-as-context|Workspace as Context]] — AGENTS.md, CLAUDE.md patterns
+- [[wiki/agent-filesystems/concepts/file-vs-memory|File vs Memory]] — Files vs vector DBs vs SQL vs graphs
+- [[wiki/agent-filesystems/patterns/gitops-for-agents|GitOps for Agents]] — Git as agent state management
+- [[wiki/agent-filesystems/patterns/memory-files|Memory Files]] — MEMORY.md, daily logs, active-tasks patterns
+
+Also add to raw ingest queue: `raw/agent-filesystems/`
+
+---
+
 ## Adding New Topics
 
 When adding a new knowledge domain:
