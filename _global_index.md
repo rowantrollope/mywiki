@@ -2,7 +2,7 @@
 title: Global Wiki Index
 tags: [index, navigation]
 created: 2026-04-04
-last_updated: 2026-04-04
+last_updated: 2026-04-05
 ---
 
 ## Rowan's Personal Wiki
@@ -38,8 +38,7 @@ Key articles:
 - [[wiki/agent-filesystems/concepts/file-vs-memory|File vs Memory]] — Files vs vector DBs vs SQL vs graphs
 - [[wiki/agent-filesystems/patterns/gitops-for-agents|GitOps for Agents]] — Git as agent state management
 - [[wiki/agent-filesystems/patterns/memory-files|Memory Files]] — MEMORY.md, daily logs, active-tasks patterns
-
-Also add to raw ingest queue: `raw/agent-filesystems/`
+- [[wiki/agent-filesystems/research/key-papers|Key Papers]] — Annotated bibliography of agent filesystem research
 
 ---
 
@@ -60,6 +59,7 @@ The `raw/<topic>/` directories are drop zones for unprocessed notes, links, PDFs
 
 Current queues:
 - `raw/agent-memory/` — drop agent memory notes/links here
+- `raw/agent-filesystems/` — drop agent filesystem notes/links here
 
 ---
 
