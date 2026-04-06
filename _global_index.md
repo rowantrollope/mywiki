@@ -2,7 +2,7 @@
 title: Global Wiki Index
 tags: [index, navigation]
 created: 2026-04-04
-last_updated: 2026-04-05
+last_updated: 2026-04-06
 ---
 
 ## Rowan's Personal Wiki
@@ -39,6 +39,21 @@ Key articles:
 - [[wiki/agent-filesystems/patterns/gitops-for-agents|GitOps for Agents]] — Git as agent state management
 - [[wiki/agent-filesystems/patterns/memory-files|Memory Files]] — MEMORY.md, daily logs, active-tasks patterns
 - [[wiki/agent-filesystems/research/key-papers|Key Papers]] — Annotated bibliography of agent filesystem research
+
+---
+
+### ⚡ LLM Memory and Caching
+How LLMs store, reuse, and retrieve information — from KV cache mechanics to prompt caching APIs to full-scale memory architectures.
+
+**[[wiki/llm-memory-caching/_index|→ LLM Memory and Caching Index]]**
+
+Key articles:
+- [[wiki/llm-memory-caching/overview|Overview]] — What LLM memory and caching means, why it matters
+- [[wiki/llm-memory-caching/concepts/kv-cache|KV Cache]] — Transformer attention caching mechanics
+- [[wiki/llm-memory-caching/concepts/prompt-caching|Prompt Caching]] — Anthropic/OpenAI/Google API-level caching
+- [[wiki/llm-memory-caching/patterns/cache-optimization|Cache Optimization]] — Structuring prompts for maximum cache hits
+- [[wiki/llm-memory-caching/patterns/memory-architectures|Memory Architectures]] — RAG, vector stores, episodic memory
+- [[wiki/llm-memory-caching/research/state-of-the-art-2026|State of the Art 2026]] — Current SOTA and open problems
 
 ---
 
