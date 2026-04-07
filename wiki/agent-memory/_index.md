@@ -2,7 +2,7 @@
 title: Agent Memory — Topic Index
 tags: [agent-memory, index]
 created: 2026-04-04
-last_updated: 2026-04-04
+last_updated: 2026-04-07
 ---
 
 ## Agent Memory Wiki
@@ -31,6 +31,15 @@ This section covers everything about how AI agents store, retrieve, and reason o
 | [[concepts/memory-consolidation]] | How agents consolidate short-term episodic experiences into stable long-term knowledge |
 | [[concepts/forgetting-mechanisms]] | Intentional forgetting, relevance decay, Ebbinghaus-inspired pruning, retention policies |
 | [[concepts/reflection-and-abstraction]] | Higher-order memory synthesis, multi-level reflection, abstraction patterns |
+
+---
+
+## Tools
+
+| Article | Summary |
+|---------|------|
+| [[tools/_index]] | Index of all agent memory tools covered in this wiki |
+| [[tools/mempalace]] | MemPalace: local-first hierarchical memory with palace structure + AAAK compression. 96.6% LongMemEval R@5, no API, free. |
 
 ---
 
@@ -96,7 +105,7 @@ Individual articles link back to this index via their `## See Also` sections.
 
 - **New to the topic?** Start with [[overview]], then [[concepts/types-of-memory]]
 - **Building something?** Go to [[architectures/rag]] or [[architectures/vector-stores]]
-- **Evaluating tools?** Compare [[architectures/mem0]] vs [[architectures/memgpt]]
+- **Evaluating tools?** Compare [[tools/mempalace]], [[architectures/mem0]], and [[architectures/memgpt]]
 - **Researching?** Start with [[papers/_index]] for reading order recommendations
 - **Reading papers?** Browse [[papers/memgpt]], [[papers/generative-agents]], etc. for detailed summaries
 - **Debugging a system?** Check [[research/open-problems]] for known failure modes
