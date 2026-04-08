@@ -2,7 +2,7 @@
 title: Agent Memory — Tools
 tags: [agent-memory, tools, index]
 created: 2026-04-07
-last_updated: 2026-04-07
+last_updated: 2026-04-08
 ---
 
 ## Agent Memory Tools
@@ -15,6 +15,7 @@ Production systems, libraries, and frameworks for adding memory to AI agents. Th
 
 | Article | What it covers |
 |---------|---------------|
+| [[anthropic-memory-api]] | Anthropic's native managed memory API for Claude agents. Workspace-scoped doc stores with auto read/write, built-in versioning, and zero-infra setup. Research Preview. |
 | [[mempalace]] | Local-first hierarchical memory with palace structure + AAAK compression. Highest published LongMemEval score (96.6% raw, 100% with rerank). Free, offline, MCP-ready. |
 
 ---
