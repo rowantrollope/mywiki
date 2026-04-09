@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's New — Rowan's AI Research Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-hover: #1c2129;
+    --text: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #656d76;
+    --accent: #87a96b;
+    --accent-dim: rgba(135,169,107,0.12);
+    --accent-border: rgba(135,169,107,0.3);
+    --border: rgba(240,246,252,0.1);
+    --border-strong: rgba(240,246,252,0.16);
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: opacity 0.15s; }
+  a:hover { opacity: 0.85; }
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,17,23,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-brand {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    color: var(--text);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 6px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    transition: all 0.15s;
+  }
+  .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.06); opacity: 1; }
+  .nav-link.active { color: var(--text); background: rgba(255,255,255,0.08); }
+
+  /* ── CONTAINER ── */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 80px 0 56px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin: 0 auto 28px;
+    line-height: 1.5;
+  }
+
+  .pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    background: var(--bg-card);
+  }
+
+  .pill .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 6px;
+    vertical-align: middle;
+    position: relative;
+    top: -0.5px;
+  }
+
+  /* ── SECTION ── */
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  /* ── FEATURED CARD ── */
+  .featured {
+    border: 1px solid var(--accent-border);
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .featured:hover { border-color: var(--accent); }
+
+  .featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+
+  .featured-date {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    margin-bottom: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  .featured h3 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  .featured .desc {
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .featured ul {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .featured ul li {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 18px;
+    position: relative;
+  }
+  .featured ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+
+  .read-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .read-link:hover { gap: 7px; }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    margin-bottom: 48px;
+  }
+
+  .timeline-entry {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 16px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .timeline-entry:last-child { border-bottom: 1px solid var(--border); }
+  .timeline-entry:hover { background: rgba(255,255,255,0.015); }
+
+  .timeline-date {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .timeline-content h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    margin-bottom: 2px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+
+  .timeline-arrow {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.15s;
+    align-self: center;
+  }
+  .timeline-entry:hover .timeline-arrow { color: var(--accent); }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 40px 0 48px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .footer a { color: var(--accent); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero { padding: 56px 0 40px; }
+    .hero h1 { font-size: 30px; }
+    .hero p { font-size: 15px; }
+    .featured { padding: 20px; }
+    .featured h3 { font-size: 19px; }
+    .timeline-entry {
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+    .timeline-date {
+      grid-column: 1 / -1;
+      margin-bottom: -6px;
+    }
+    .container { padding: 0 16px; }
+    .nav { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <div class="nav-left">
+    <span class="nav-brand">mywiki</span>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">📖 Browse Wiki</a>
+      <a href="home.html" class="nav-link active">🏠 What's New</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="container">
+  <section class="hero">
+    <h1>Rowan's AI Research Wiki</h1>
+    <p>A living knowledge base on AI agents, memory, and the SF tech scene</p>
+    <div class="pills">
+      <span class="pill"><span class="dot"></span>63 articles</span>
+      <span class="pill"><span class="dot"></span>Updated daily</span>
+      <span class="pill"><span class="dot"></span>Est. April 2026</span>
+    </div>
+  </section>
+
+  <!-- ── FEATURED ── -->
+  <div class="section-label">Latest</div>
+
+  <div class="featured">
+    <span class="featured-date">Apr 9, 2026</span>
+    <h3>Wiki Viewer Launched</h3>
+    <p class="desc">
+      The mywiki knowledge base now has an interactive browser. A clean, Notion-style sidebar with full-text search, topic grouping, and markdown rendering — making it easy to explore 60+ articles across five research domains.
+    </p>
+    <ul>
+      <li>Sidebar navigation with collapsible topic groups</li>
+      <li>Full-text search across all articles</li>
+      <li>Clean markdown rendering with syntax highlighting</li>
+    </ul>
+    <a href="index.html" class="read-link">Browse the wiki →</a>
+  </div>
+
+  <!-- ── TIMELINE ── -->
+  <div class="section-label">Recent Additions</div>
+
+  <div class="timeline">
+
+    <a href="index.html" style="text-decoration:none;color:inherit;">
+    <div class="timeline-entry">
+      <span class="timeline-date">Apr 8</span>
+      <div class="timeline-content">
+        <h4>Anthropic Managed Memory API</h4>
+        <p>Full article on the native Claude memory system (Research Preview) — architecture, API walkthrough, 6 memory tools, comparison vs MemPalace/mem0/Zep</p>
+      </div>
+      <span class="timeline-arrow">→</span>
+    </div>
+    </a>
+
+    <a href="index.html" style="text-decoration:none;color:inherit;">
+    <div class="timeline-entry">
+      <span class="timeline-date">Apr 7</span>
+      <div class="timeline-content">
+        <h4>MemPalace</h4>
+        <p>Deep dive on the viral memory system by Milla Jovovich + Ben Sigman — palace structure, AAAK 30x compression, 19 MCP tools, benchmark analysis</p>
+      </div>
+      <span class="timeline-arrow">→</span>
+    </div>
+    </a>
+
+    <a href="index.html" style="text-decoration:none;color:inherit;">
+    <div class="timeline-entry">
+      <span class="timeline-date">Apr 6</span>
+      <div class="timeline-content">
+        <h4>LLM Memory &amp; Caching</h4>
+        <p>10 articles on KV cache mechanics, prompt caching APIs (Anthropic/OpenAI/Google with pricing), memory architectures, 13 annotated papers</p>
+      </div>
+      <span class="timeline-arrow">→</span>
+    </div>
+    </a>
+
+    <a href="index.html" style="text-decoration:none;color:inherit;">
+    <div class="timeline-entry">
+      <span class="timeline-date">Apr 5</span>
+      <div class="timeline-content">
+        <h4>Agent Filesystems</h4>
+        <p>17 articles on workspace-as-context, context engineering patterns, gitops for agents, Claude Code/Codex/AutoGen coverage, 3 arXiv papers</p>
+      </div>
+      <span class="timeline-arrow">→</span>
+    </div>
+    </a>
+
+    <a href="index.html" style="text-decoration:none;color:inherit;">
+    <div class="timeline-entry">
+      <span class="timeline-date">Apr 4</span>
+      <div class="timeline-content">
+        <h4>Agent Memory Corpus</h4>
+        <p>30+ articles seeded — arXiv papers (AgeMem, AutoRefine, MemoryAgentBench), blogs, concepts, tools (mem0, Zep, Letta, MemGPT, RAG patterns)</p>
+      </div>
+      <span class="timeline-arrow">→</span>
+    </div>
+    </a>
+
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>Updated by Sancho · Built with AI · Part of the <a href="https://rowantrollope.github.io/decaf/">Decaf project</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
